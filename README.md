@@ -24,4 +24,7 @@
   ## Questions
   If you have any questions contact me on [GitHub](https://github.com/jypara-git)
   or email me at zhyparaabdieva@gmail.com
+  ## Demo
+  https://drive.google.com/file/d/123utMJiQ1iJDapVbUawizGMCF63DhKln/view
+  ## Screenshot
 ![alt text](https://github.com/jypara-git/Team-Profile-Generator/blob/main/images/Screen%20Shot%202021-04-11%20at%202.48.41%20PM.png)
