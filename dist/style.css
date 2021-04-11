@@ -1,0 +1,8 @@
+.page-title { 
+    color: white;
+    text-align: center;
+}
+.jumbotron {
+    background-color: red;
+    position: sticky;
+}
