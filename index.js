@@ -5,6 +5,7 @@ const Engineer = require('./lib/Engineer');
 const Manager = require('./lib/Manager');
 const Intern = require('./lib/Intern');
 const { generatePage } = require('./src/page-template');
+const {writeFile, copyFile} = require('./utils/generate-site');
 const employees = [];
 const promptUser = () => {
     return inquirer.prompt([
@@ -140,10 +141,12 @@ const promptEngineer = () => {
             else if (engInfo.options === 'Intern') {
                 promptIntern();
             } else {
-                generatePage(employees);
-                console.log(generatePage(employees));
-            }
-        }) 
+                writeFile(generatePage(employees))
+                .then(() => {
+                    copyFile();
+                });
+            };
+        });
 };
 const promptIntern = () => {
     return inquirer.prompt([
@@ -216,8 +219,10 @@ const promptIntern = () => {
         else if (internInfo.options === 'Engineer') {
             promptEngineer();
         } else {
-            generatePage(employees);
-            console.log(generatePage(employees));
+            writeFile(generatePage(employees))
+            .then(() => {
+                copyFile()
+            });
         }
     })
 };
@@ -232,7 +237,9 @@ promptUser()
         else if (userInput.options === 'Intern') {
             promptIntern();
         } else {
-            generatePage(employees);
-            console.log(generatePage(employees));
+            writeFile(generatePage(employees))
+            .then(() => {
+                copyFile()
+            });
         }
     });
